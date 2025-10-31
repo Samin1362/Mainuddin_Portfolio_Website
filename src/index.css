@@ -1,2 +1,40 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Logo Glow Animation */
+@keyframes logoGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5), 0 0 10px rgba(37, 99, 235, 0.3),
+      0 0 15px rgba(37, 99, 235, 0.2);
+    border-color: rgb(37, 99, 235);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.8), 0 0 30px rgba(37, 99, 235, 0.6),
+      0 0 40px rgba(37, 99, 235, 0.4), 0 0 50px rgba(37, 99, 235, 0.2);
+    border-color: rgb(96, 165, 250);
+  }
+}
+
+.logo-glow {
+  animation: logoGlow 2s ease-in-out infinite;
+}
+
+/* Marquee Scroll Animation */
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+.marquee-content {
+  animation: marqueeScroll 20s linear infinite;
+  will-change: transform;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const navLinks = [
@@ -58,7 +59,16 @@ const Navbar = () => {
             href="#home"
             className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300 ml-2 lg:ml-0"
           >
-            Mainuddin Kabir
+            <div className="flex items-center gap-2">
+              <div className="logo-glow border-2 border-blue-600 rounded-lg p-1.5 bg-white">
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-8 h-12 object-contain"
+                />
+              </div>
+              Mainuddin Kabir
+            </div>
           </a>
         </div>
 
