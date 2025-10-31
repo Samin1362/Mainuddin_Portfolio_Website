@@ -21,7 +21,7 @@ const Newspaper = () => {
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
       {/* Newspaper Masthead Header */}
-      <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b-4 border-blue-600 py-6 px-4">
+      <div className="bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 border-b-4 border-blue-600 py-6 px-4">
         <div className="flex items-center justify-center gap-3 mb-3">
           <div className="logo-glow border-2 border-blue-500 rounded-lg p-2 bg-white">
             <img src={logo} alt="logo" className="w-8 h-10 object-contain" />
@@ -75,7 +75,7 @@ const Newspaper = () => {
                   className="w-full h-full object-cover"
                 />
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
 
                 {/* Photo Caption */}
                 <div className="absolute bottom-0 left-0 right-0 bg-black/70 px-3 py-2">

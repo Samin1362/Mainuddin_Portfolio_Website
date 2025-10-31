@@ -1,19 +1,25 @@
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import RightAside from "../components/RightAside";
+import Loader from "../components/Loader";
 
 const Root = () => {
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
+
   return (
     <div>
+      {/* Show loader when navigating */}
+      {isLoading && <Loader />}
+
       <header>
-        <Navbar></Navbar>
+        <Navbar />
       </header>
       <main>
-        <Outlet></Outlet>
+        <Outlet />
       </main>
       <footer>
-        <Footer></Footer>
+        <Footer />
       </footer>
     </div>
   );

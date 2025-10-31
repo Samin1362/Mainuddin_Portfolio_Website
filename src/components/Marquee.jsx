@@ -6,7 +6,7 @@ const Marquee = () => {
     "Dedicated Kyokushin Karate instructor committed to building strength, discipline, and spirit through traditional full-contact training.";
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 border-y-4 border-blue-800 shadow-2xl overflow-hidden">
+    <div className="relative bg-linear-to-r from-blue-600 via-blue-700 to-blue-600 border-y-4 border-blue-800 shadow-2xl overflow-hidden">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
@@ -47,11 +47,11 @@ const Marquee = () => {
         </div>
 
         {/* Right Side Gradient Fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-blue-600 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-blue-600 to-transparent pointer-events-none z-10"></div>
       </div>
 
       {/* Decorative Bottom Border Animation */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent animate-pulse"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-yellow-400 to-transparent animate-pulse"></div>
     </div>
   );
 };

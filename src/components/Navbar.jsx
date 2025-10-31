@@ -1,14 +1,18 @@
 import React from "react";
+import { NavLink, useLocation } from "react-router";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
+  const location = useLocation();
+
   const navLinks = [
-    "Experience",
-    "Skills",
-    "Certifications",
-    "Education",
-    "Accomplishments",
-    "Gallery",
+    { name: "Home", path: "/", type: "route" },
+    { name: "Experience", path: "/experience", type: "route" },
+    { name: "Skills", path: "/skills", type: "route" },
+    { name: "Certifications", path: "/certifications", type: "route" },
+    { name: "Education", path: "/education", type: "route" },
+    { name: "Accomplishments", path: "/accomplishments", type: "route" },
+    { name: "Gallery", path: "/gallery", type: "route" },
   ];
 
   return (
@@ -42,21 +46,34 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-white rounded-lg z-1 mt-3 w-60 p-3 shadow-xl border border-gray-100"
             >
               {navLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase()}`}
-                    className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md py-3 font-medium transition-all duration-200"
-                  >
-                    {link}
-                  </a>
+                <li key={link.name}>
+                  {link.type === "route" ? (
+                    <NavLink
+                      to={link.path}
+                      className={({ isActive }) =>
+                        `text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md py-3 font-medium transition-all duration-200 ${
+                          isActive ? "bg-blue-50 text-blue-600 font-bold" : ""
+                        }`
+                      }
+                    >
+                      {link.name}
+                    </NavLink>
+                  ) : (
+                    <a
+                      href={link.path}
+                      className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md py-3 font-medium transition-all duration-200"
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Logo/Brand */}
-          <a
-            href="#home"
+          <NavLink
+            to="/"
             className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300 ml-2 lg:ml-0"
           >
             <div className="flex items-center gap-2">
@@ -69,21 +86,43 @@ const Navbar = () => {
               </div>
               Mainuddin Kabir
             </div>
-          </a>
+          </NavLink>
         </div>
 
         {/* Desktop Menu */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
             {navLinks.map((link) => (
-              <li key={link}>
-                <a
-                  href={`#${link.toLowerCase()}`}
-                  className="relative px-4 py-2 text-gray-700 font-medium hover:text-blue-600 transition-colors duration-300 group"
-                >
-                  {link}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-                </a>
+              <li key={link.name}>
+                {link.type === "route" ? (
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `relative px-4 py-2 font-medium transition-colors duration-300 group ${
+                        isActive
+                          ? "text-blue-600 font-bold"
+                          : "text-gray-700 hover:text-blue-600"
+                      }`
+                    }
+                  >
+                    {link.name}
+                    <span
+                      className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${
+                        location.pathname === link.path
+                          ? "w-full"
+                          : "w-0 group-hover:w-full"
+                      }`}
+                    ></span>
+                  </NavLink>
+                ) : (
+                  <a
+                    href={link.path}
+                    className="relative px-4 py-2 text-gray-700 font-medium hover:text-blue-600 transition-colors duration-300 group"
+                  >
+                    {link.name}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                  </a>
+                )}
               </li>
             ))}
           </ul>
