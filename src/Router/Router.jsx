@@ -8,6 +8,7 @@ import Skills from "../pages/Skills";
 import Certifications from "../pages/Certifications";
 import Education from "../pages/Education";
 import Accomplishments from "../pages/Accomplishments";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -21,28 +22,32 @@ const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "/experience", 
+        path: "/experience",
         Component: Experience,
       },
       {
-        path: "/skills", 
+        path: "/skills",
         Component: Skills,
       },
       {
-        path: "/certifications", 
-        Component: Certifications
+        path: "/certifications",
+        Component: Certifications,
       },
       {
-        path: "/education", 
-        Component: Education
+        path: "/education",
+        Component: Education,
       },
       {
-        path: "/accomplishments", 
-        Component: Accomplishments
+        path: "/accomplishments",
+        Component: Accomplishments,
       },
       {
         path: "/gallery",
         Component: Gallery,
+      },
+      {
+        path: "/contact",
+        Component: Contact,
       },
       {
         path: "*",

@@ -61,7 +61,7 @@ const Newspaper = () => {
 
         {/* Auto-Rotating Image Carousel */}
         <div className="relative mb-4">
-          <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg border-2 border-gray-300">
+          <div className="relative h-[280px] sm:h-[350px] rounded-lg overflow-hidden shadow-lg border-2 border-gray-300">
             {images.map((image, index) => (
               <div
                 key={index}
@@ -163,7 +163,7 @@ const Newspaper = () => {
 
         {/* View Gallery Button */}
         <a
-          href="#gallery"
+          href="/gallery"
           className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 group"
         >
           <span className="flex items-center justify-center gap-2">

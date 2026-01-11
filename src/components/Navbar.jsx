@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "Education", path: "/education", type: "route" },
     { name: "Accomplishments", path: "/accomplishments", type: "route" },
     { name: "Gallery", path: "/gallery", type: "route" },
+    { name: "Contact", path: "/contact", type: "route" },
   ];
 
   return (
@@ -130,12 +131,12 @@ const Navbar = () => {
 
         {/* Contact Button */}
         <div className="navbar-end">
-          <a
-            href="#contact"
+          <NavLink
+            to="/contact"
             className="btn bg-blue-600 hover:bg-blue-700 text-white border-none px-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Contact
-          </a>
+          </NavLink>
         </div>
       </div>
     </nav>

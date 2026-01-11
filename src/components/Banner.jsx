@@ -68,14 +68,14 @@ const Banner = () => {
         >
           {/* Background Image with Parallax Effect */}
           <div
-            className="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-[6000ms]"
+            className="absolute inset-0 bg-contain sm:bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-[6000ms]"
             style={{
               backgroundImage: `url(${slide.image})`,
             }}
           />
 
           {/* Gradient Overlay - Blue Theme */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/70 to-blue-900/80"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-blue-900/80 via-blue-800/70 to-blue-900/80"></div>
 
           {/* Animated Pattern Overlay */}
           <div className="absolute inset-0 opacity-10">
@@ -114,9 +114,9 @@ const Banner = () => {
 
               {/* Decorative Karate Belt Divider */}
               <div className="flex justify-center items-center gap-4 animate-fade-in-delay-3">
-                <div className="h-1 w-16 bg-gradient-to-r from-transparent via-yellow-400 to-yellow-400 rounded-full"></div>
+                <div className="h-1 w-16 bg-linear-to-r from-transparent via-yellow-400 to-yellow-400 rounded-full"></div>
                 <span className="text-5xl animate-pulse">🥋</span>
-                <div className="h-1 w-16 bg-gradient-to-l from-transparent via-yellow-400 to-yellow-400 rounded-full"></div>
+                <div className="h-1 w-16 bg-linear-to-l from-transparent via-yellow-400 to-yellow-400 rounded-full"></div>
               </div>
 
               {/* Bottom Stats */}

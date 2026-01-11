@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 const Loader = () => {
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center z-50">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_50%)]"></div>
@@ -60,7 +60,7 @@ const Loader = () => {
         {/* Progress Bar */}
         <div className="mt-8 w-64 mx-auto">
           <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-yellow-400 to-white rounded-full animate-progress"></div>
+            <div className="h-full bg-linear-to-r from-yellow-400 to-white rounded-full animate-progress"></div>
           </div>
         </div>
 

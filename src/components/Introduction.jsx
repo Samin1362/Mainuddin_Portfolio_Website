@@ -23,12 +23,12 @@ const Introduction = () => {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-br from-gray-50 to-white py-8">
+    <section className="w-full bg-linear-to-br from-gray-50 to-white py-8">
       <div className="max-w-6xl mx-auto px-4">
         {/* Main Card */}
         <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden hover:shadow-3xl transition-shadow duration-500">
           {/* Card Header with Gradient */}
-          <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 px-8 py-12 text-center">
+          <div className="relative bg-linear-to-r from-blue-600 via-blue-700 to-blue-600 px-8 py-12 text-center">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.2),transparent_50%)]"></div>
@@ -68,7 +68,7 @@ const Introduction = () => {
             {/* Main Description */}
             <div className="mb-10">
               <div className="flex items-start gap-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-6 shadow-md">
-                <div className="text-3xl flex-shrink-0">📖</div>
+                <div className="text-3xl shrink-0">📖</div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">
                     About the Instructor
@@ -89,7 +89,7 @@ const Introduction = () => {
               {highlights.map((item, index) => (
                 <div
                   key={index}
-                  className="group bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-600 hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="group bg-linear-to-br from-white to-blue-50 rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-600 hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
@@ -106,7 +106,7 @@ const Introduction = () => {
 
             {/* Bottom CTA */}
             <div className="text-center pt-6 border-t-2 border-gray-100">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-default">
+              <div className="inline-flex items-center gap-3 bg-linear-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-default">
                 <span className="text-2xl">🥋</span>
                 <span className="text-lg">
                   Passionate About Martial Arts Excellence

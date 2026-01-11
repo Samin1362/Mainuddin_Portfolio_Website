@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const ErrorPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center px-4 overflow-hidden relative">
+    <div className="min-h-screen bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center px-4 overflow-hidden relative">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.2),transparent_50%)]"></div>

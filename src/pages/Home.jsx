@@ -7,7 +7,7 @@ import About from "../components/About";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+    <div className="min-h-screen bg-linear-to-b from-white via-gray-50 to-white">
       {/* Banner Section */}
       <section className="w-full">
         <Banner />
@@ -47,7 +47,7 @@ const Home = () => {
       </section>
 
       {/* Decorative Bottom Section */}
-      <section className="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 py-12 px-4 mt-16">
+      <section className="w-full bg-linear-to-r from-blue-600 via-blue-700 to-blue-600 py-12 px-4 mt-16">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 px-6 py-3 rounded-full mb-6">
             <span className="text-3xl">🥋</span>
@@ -64,7 +64,7 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <span>📞</span>
