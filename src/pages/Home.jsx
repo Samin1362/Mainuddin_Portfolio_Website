@@ -47,34 +47,34 @@ const Home = () => {
       </section>
 
       {/* Decorative Bottom Section */}
-      <section className="w-full bg-linear-to-r from-blue-600 via-blue-700 to-blue-600 py-12 px-4 mt-16">
+      <section className="w-full bg-linear-to-r from-blue-600 via-blue-700 to-blue-600 py-8 sm:py-10 md:py-12 px-4 mt-8 sm:mt-12 md:mt-16">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 px-6 py-3 rounded-full mb-6">
-            <span className="text-3xl">🥋</span>
-            <span className="text-white font-bold text-lg">
+          <div className="inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm border border-white/30 px-4 py-2 sm:px-6 sm:py-3 rounded-full mb-4 sm:mb-5 md:mb-6">
+            <span className="text-2xl sm:text-3xl">🥋</span>
+            <span className="text-white font-bold text-sm sm:text-base md:text-lg">
               Kyokushin Excellence
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4 px-2">
             Begin Your Martial Arts Journey
           </h2>
-          <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-blue-100 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-7 md:mb-8 px-4">
             Join us in the pursuit of strength, discipline, and personal growth
             through the art of Kyokushin Karate
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-yellow-400 text-blue-900 px-5 py-3 sm:px-6 md:px-8 sm:py-3.5 md:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              <span>📞</span>
+              <span className="text-lg sm:text-xl">📞</span>
               <span>Get in Touch</span>
             </a>
             <a
               href="/gallery"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white text-white px-5 py-3 sm:px-6 md:px-8 sm:py-3.5 md:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg hover:bg-white/20 hover:scale-105 transition-all duration-300"
             >
-              <span>📸</span>
+              <span className="text-lg sm:text-xl">📸</span>
               <span>View Gallery</span>
             </a>
           </div>
@@ -85,7 +85,7 @@ const Home = () => {
           <svg
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
-            className="w-full h-16 fill-white"
+            className="w-full h-12 sm:h-14 md:h-16 fill-white"
           >
             <path d="M0,0 L0,40 Q300,90 600,40 T1200,40 L1200,0 Z"></path>
           </svg>
