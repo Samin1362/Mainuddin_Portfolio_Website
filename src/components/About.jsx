@@ -240,67 +240,67 @@ const About = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-linear-to-b from-white via-gray-50 to-white py-16"
+      className="w-full bg-linear-to-b from-white via-gray-50 to-white py-8 sm:py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-        <div ref={headerRef} className="text-center mb-12">
+        <div ref={headerRef} className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2
             ref={titleRef}
-            className="text-4xl md:text-5xl font-bold text-gray-800 mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4"
           >
             About <span className="text-blue-600">Me</span>
           </h2>
           <div
             ref={underlineRef}
-            className="w-24 h-1.5 bg-linear-to-r from-blue-600 via-blue-400 to-blue-600 mx-auto rounded-full mb-4"
+            className="w-20 sm:w-24 h-1 sm:h-1.5 bg-linear-to-r from-blue-600 via-blue-400 to-blue-600 mx-auto rounded-full mb-3 sm:mb-4"
           ></div>
           <p
             ref={taglineRef}
-            className="text-gray-600 text-lg max-w-2xl mx-auto"
+            className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4"
           >
             A journey of dedication, discipline, and excellence in Kyokushin
             Karate
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-start">
           {/* Left Side - Images Gallery */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <div className="relative">
               {/* Main Featured Image */}
               <div
                 ref={featuredImageRef}
-                className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-blue-600 group"
+                className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border-2 sm:border-4 border-blue-600 group"
               >
                 <img
                   src={images[0].src}
                   alt={images[0].alt}
-                  className="w-full h-[300px] sm:h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-[250px] sm:h-[350px] md:h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-2xl font-bold mb-2">
+                <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6">
+                  <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2">
                     Kyokushin Excellence
                   </h3>
-                  <p className="text-blue-200 text-sm">
+                  <p className="text-blue-200 text-xs sm:text-sm">
                     Dedication to the martial arts way
                   </p>
                 </div>
               </div>
 
               {/* Two Smaller Images Grid */}
-              <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6">
                 {images.slice(1).map((image, index) => (
                   <div
                     key={index}
                     ref={(el) => (smallImagesRef.current[index] = el)}
-                    className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-blue-300 hover:border-blue-600 transition-all duration-300 group hover:scale-105"
+                    className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl border-2 border-blue-300 hover:border-blue-600 transition-all duration-300 group hover:scale-105"
                   >
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-[140px] sm:h-[180px] object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-[120px] sm:h-[160px] md:h-[180px] object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
@@ -312,29 +312,33 @@ const About = () => {
             <div className="flex justify-center">
               <div
                 ref={badgeRef}
-                className="inline-flex items-center gap-3 bg-linear-to-r from-yellow-400 via-yellow-500 to-yellow-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg"
+                className="inline-flex items-center gap-2 sm:gap-3 bg-linear-to-r from-yellow-400 via-yellow-500 to-yellow-400 text-gray-900 px-4 py-2 sm:px-6 sm:py-3 rounded-full font-bold shadow-lg text-sm sm:text-base"
               >
-                <span className="text-2xl">🏆</span>
+                <span className="text-xl sm:text-2xl">🏆</span>
                 <span>Award-Winning Karateka</span>
               </div>
             </div>
           </div>
 
           {/* Right Side - Achievements */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Featured Achievement - Black Belt */}
             <div
               ref={blackBeltRef}
-              className="bg-linear-to-br from-blue-600 to-blue-700 rounded-3xl p-8 shadow-2xl border-4 border-blue-800 transform hover:scale-105 transition-all duration-300"
+              className="bg-linear-to-br from-blue-600 to-blue-700 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl sm:shadow-2xl border-2 sm:border-4 border-blue-800 transform hover:scale-105 transition-all duration-300"
             >
               <div className="text-center">
-                <div className="text-6xl mb-4">🥋</div>
-                <h3 className="text-3xl font-bold text-white mb-2">
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">
+                  🥋
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                   Black Belt
                 </h3>
-                <p className="text-blue-100 text-lg">Kyokushin Karate</p>
-                <div className="mt-4 pt-4 border-t border-blue-400">
-                  <p className="text-white font-semibold">
+                <p className="text-blue-100 text-base sm:text-lg">
+                  Kyokushin Karate
+                </p>
+                <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-blue-400">
+                  <p className="text-white font-semibold text-sm sm:text-base">
                     The highest achievement in traditional martial arts
                     excellence
                   </p>
@@ -343,29 +347,29 @@ const About = () => {
             </div>
 
             {/* Other Achievements Grid */}
-            <div className="grid gap-4">
+            <div className="grid gap-3 sm:gap-4">
               {achievements.slice(1).map((achievement, index) => (
                 <div
                   key={index}
                   ref={(el) => (achievementCardsRef.current[index] = el)}
-                  className="group bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  className="group bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="shrink-0 w-16 h-16 bg-linear-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-linear-to-br from-blue-100 to-blue-200 rounded-lg sm:rounded-xl flex items-center justify-center text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300 shadow-md">
                       {achievement.icon}
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between gap-2 mb-2">
-                        <h4 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between gap-2 mb-1 sm:mb-2">
+                        <h4 className="text-base sm:text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
                           {achievement.title}
                         </h4>
                         {achievement.year && (
-                          <span className="shrink-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                          <span className="shrink-0 bg-blue-600 text-white text-xs font-bold px-2 sm:px-3 py-1 rounded-full">
                             {achievement.year}
                           </span>
                         )}
                       </div>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                         {achievement.description}
                       </p>
                     </div>
@@ -375,35 +379,37 @@ const About = () => {
             </div>
 
             {/* Stats Section */}
-            <div className="grid grid-cols-3 gap-4 pt-6">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 pt-4 sm:pt-6">
               <div
                 ref={(el) => (statsCardsRef.current[0] = el)}
-                className="bg-linear-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center border-2 border-blue-200"
+                className="bg-linear-to-br from-blue-50 to-blue-100 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border-2 border-blue-200"
               >
-                <div className="text-3xl font-bold text-blue-600 mb-1">5+</div>
-                <div className="text-xs text-gray-600 font-semibold">
+                <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-0.5 sm:mb-1">
+                  5+
+                </div>
+                <div className="text-[10px] sm:text-xs text-gray-600 font-semibold">
                   Major Awards
                 </div>
               </div>
               <div
                 ref={(el) => (statsCardsRef.current[1] = el)}
-                className="bg-linear-to-br from-yellow-50 to-yellow-100 rounded-xl p-4 text-center border-2 border-yellow-200"
+                className="bg-linear-to-br from-yellow-50 to-yellow-100 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border-2 border-yellow-200"
               >
-                <div className="text-3xl font-bold text-yellow-600 mb-1">
+                <div className="text-2xl sm:text-3xl font-bold text-yellow-600 mb-0.5 sm:mb-1">
                   3+
                 </div>
-                <div className="text-xs text-gray-600 font-semibold">
+                <div className="text-[10px] sm:text-xs text-gray-600 font-semibold">
                   Years Training
                 </div>
               </div>
               <div
                 ref={(el) => (statsCardsRef.current[2] = el)}
-                className="bg-linear-to-br from-purple-50 to-purple-100 rounded-xl p-4 text-center border-2 border-purple-200"
+                className="bg-linear-to-br from-purple-50 to-purple-100 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border-2 border-purple-200"
               >
-                <div className="text-3xl font-bold text-purple-600 mb-1">
+                <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-0.5 sm:mb-1">
                   1st
                 </div>
-                <div className="text-xs text-gray-600 font-semibold">
+                <div className="text-[10px] sm:text-xs text-gray-600 font-semibold">
                   Black Belt
                 </div>
               </div>

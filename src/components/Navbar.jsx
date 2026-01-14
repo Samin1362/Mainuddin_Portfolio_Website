@@ -75,17 +75,21 @@ const Navbar = () => {
           {/* Logo/Brand */}
           <NavLink
             to="/"
-            className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300 ml-2 lg:ml-0"
+            className="font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300 ml-2 lg:ml-0 text-base sm:text-lg md:text-xl lg:text-2xl"
           >
             <div className="flex items-center gap-2">
-              <div className="logo-glow border-2 border-blue-600 rounded-lg p-1.5 bg-white">
+              {/* Logo - Hidden on mobile, visible on lg screens */}
+              <div className="hidden lg:block logo-glow border-2 border-blue-600 rounded-lg p-1.5 bg-white">
                 <img
                   src={logo}
                   alt="logo"
                   className="w-8 h-12 object-contain"
                 />
               </div>
-              Mainuddin Kabir
+              {/* Text - Responsive sizing */}
+              <span className="truncate max-w-[140px] sm:max-w-[180px] md:max-w-none">
+                Mainuddin <br className="hidden sm:block"/> Kabir
+              </span>
             </div>
           </NavLink>
         </div>
@@ -129,11 +133,11 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Contact Button */}
+        {/* Contact Button - Responsive sizing */}
         <div className="navbar-end">
           <NavLink
             to="/contact"
-            className="btn bg-blue-600 hover:bg-blue-700 text-white border-none px-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="btn bg-blue-600 hover:bg-blue-700 text-white border-none shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 px-3 sm:px-4 md:px-6 text-xs sm:text-sm md:text-base min-h-10 h-auto"
           >
             Contact
           </NavLink>
